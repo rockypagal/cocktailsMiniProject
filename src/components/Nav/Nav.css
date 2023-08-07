@@ -1,0 +1,19 @@
+.navSection,.navSection ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navSection {
+    padding:15px;
+}
+
+.navSection .logo{
+    color:darkslateblue;
+}
+
+.navSection .links ul li{
+ margin-left: 15px;
+ font-size: 20px;
+}
+

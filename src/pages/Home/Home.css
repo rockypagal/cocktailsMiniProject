@@ -1,0 +1,110 @@
+.homeSection h1 {
+  color: #3f2a65;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.homeSection .searchForm,
+.homeSection .searchForm form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeSection .searchForm input {
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+  color: #3f2a65;
+
+}
+
+.homeSection .searchForm form {
+  border-radius: 5px;
+}
+
+.homeSection .searchForm button {
+  padding: 10px;
+  margin-left: 10px;
+  color:white;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color:deepskyblue;
+  cursor: pointer;
+  
+
+}
+
+.homeSection .cardSection {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.drinkCard {
+  margin: auto;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.drinkCard img {
+  width: 100%;
+}
+
+.cardDetails {
+  padding: 5px 15px;
+  line-height: 1.5rem;
+}
+
+.cardDetails button {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.cardDetails button a {
+  color: dodgerblue;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 880px;
+  }
+
+  .homeSection .cardSection {
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 481px;
+    /* background-color: red; */
+    overflow: hidden;
+  }
+
+  .homeSection .cardSection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .drinkCard {
+    width: 80%;
+  }
+}
+@media (max-width: 481px) {
+  .container {
+    width: 100%;
+  }
+
+  .homeSection .cardSection {
+    grid-template-columns: 1fr;
+  }
+  .drinkCard {
+    width: 70%;
+  }
+
+}

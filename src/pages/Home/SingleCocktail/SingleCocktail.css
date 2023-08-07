@@ -1,0 +1,56 @@
+.singleCocktailPage{
+    display: flex;
+}
+
+.pre a{
+    color:black;
+    font-size: 20px;
+    transition: all ease .2s;
+}
+.pre :hover{
+    color:rgba(24, 96, 191, 0.96);
+    font-size: 20px;
+}
+
+.singleCocktailPage .img, .singleCocktailPage .info{
+    margin-top: 50px;
+    flex: 1;
+}
+
+.singleCocktailPage .img img{
+    width: 80%;
+}
+
+.singleCocktailPage .info p{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.singleCocktailPage .info p span{
+    font-size: 20px;
+    color:chocolate;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+      width: 481px;
+      /* background-color: red; */
+      overflow: hidden;
+    }
+    .singleCocktailPage{
+        flex-direction: column;
+    }
+    
+  }
+
+  @media (max-width: 481px) {
+  .container {
+    width: 100%;
+  }
+
+
+  
+
+}

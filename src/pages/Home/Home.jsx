@@ -6,12 +6,12 @@ import InputForm from "../../components/InputForm";
 import Loading from "../../components/Loading/Loading";
 import { getCocktails } from "../../features/cocktailsSlice";
 const Home = () => {
-  const { cocktails,error } = useSelector((store) => store.cocktail);
+  const { cocktails,error,cocktailName } = useSelector((store) => store.cocktail);
 
   let drinks = cocktails.drinks;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCocktails("a"));
+    dispatch(getCocktails(cocktailName));
   }, []);
   const { loading } = useSelector((store) => store.cocktail);
   return (

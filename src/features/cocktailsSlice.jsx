@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { getCocktailsThunk,fetchCocktailThunk} from "./ThunksApi";
+import { getCocktailsThunk, fetchCocktailThunk } from "./ThunksApi";
 
 export const getCocktails = createAsyncThunk(
   "get/getCocktails",
@@ -10,30 +10,22 @@ export const getCocktails = createAsyncThunk(
 
 export const fetchSingleCocktail = createAsyncThunk(
   "fetch/singleCocktail",
-fetchCocktailThunk
-  );
+  fetchCocktailThunk
+);
 
 const cocktailSlice = createSlice({
   name: "cocktail",
   initialState: {
     cocktails: [],
     singleCocktail: [{}],
+    cocktailName:'a',
     loading: false,
     error: false,
   },
   reducers: {
-    getCocktails(state, action) {
-      state.loading = true;
-      state.error = null;
-    },
-    getCocktailsSuccess(state, action) {
-      state.loading = false;
-      state.cocktails = action.payload;
-    },
-    getCocktailsError(state, action) {
-      state.loading = false;
-      state.error = action.payload;
-    },
+    setCocktail:(state,{payload})=>{
+      state.cocktailName = payload
+    }
   },
   extraReducers: (builds) => {
     builds.addCase(getCocktails.pending, (state) => {
@@ -64,4 +56,5 @@ const cocktailSlice = createSlice({
   },
 });
 
+export const {setCocktail} = cocktailSlice.actions
 export default cocktailSlice.reducer;

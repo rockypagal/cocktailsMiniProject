@@ -20,7 +20,7 @@ const Cards = () => {
               <p><span>name:</span>{drink.strDrink}</p>
               <p><span>Type:</span>{drink.strAlcoholic}</p>
               <button>
-                <Link to={`/singlecocktail/${drink.idDrink}`}>Read More</Link>
+                <Link to={`/singlecocktail/${drink.idDrink}`}>More Info</Link>
               </button>
             </div>
           </div>

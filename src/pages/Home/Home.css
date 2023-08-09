@@ -106,5 +106,7 @@
   .drinkCard {
     width: 70%;
   }
-
+  .homeSection .searchForm input {
+ width:70%; 
+  }
 }

@@ -17,3 +17,18 @@
  font-size: 20px;
 }
 
+.navSection{
+    width: 100%;
+}
+
+@media (max-width: 481px) {
+    .container {
+      width: 100%;
+    }
+  
+    .navSection {
+    font-size: 16px;
+    padding: 0px;
+    }
+  }
+  

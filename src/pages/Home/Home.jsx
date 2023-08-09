@@ -26,7 +26,7 @@ const Home = () => {
           {loading ? <Loading /> : <Cards></Cards>}
         </div>
       {
-        error && <h1 className="error"> Oops It's Like We Are Out Of Stock</h1>
+        error && <h1 className="error"  style={{color:`${darkMode?'white':'darkslateblue'}`}}> Oops It's Like You Are Out Of Luck</h1>
       }
     </div>
   );

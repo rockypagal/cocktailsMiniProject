@@ -10,9 +10,8 @@
     margin: auto;
 }
 body{
-    color:darkslateblue;
     font-family: 'Outfit', sans-serif;
-    transition:all 0.2s ease;
+    transition:all .2s ease;
 }
 
 

@@ -4,20 +4,33 @@ import { Link, useParams } from "react-router-dom";
 import { fetchSingleCocktail } from "../../../features/cocktailsSlice";
 import "./SingleCocktail.css";
 import Loading from "../../../components/Loading/Loading";
+
 const SingleCocktail = () => {
   const { id } = useParams();
+
   const dispatch = useDispatch();
-  const { singleCocktail, loading,darkMode } = useSelector((store) => store.cocktail);
-  const { strDrinkThumb,strCategory , strDrink, strGlass, strAlcoholic } = singleCocktail[0];
+
+  const { singleCocktail, loading, darkMode } = useSelector(
+    (store) => store.cocktail
+  );
+
+  const { strDrinkThumb, strCategory, strDrink, strGlass, strAlcoholic } =
+    singleCocktail[0];
 
   console.log(singleCocktail);
   useEffect(() => {
     dispatch(fetchSingleCocktail(id));
   }, []);
+
   return (
     <section className="container cocktailSection">
       <button className="pre">
-        <Link to="/"  style={{color:`${darkMode?'white':'darkslateblue'}`}}>Back</Link>
+        <Link
+          to="/"
+          style={{ color: `${darkMode ? "white" : "darkslateblue"}` }}
+        >
+          Back
+        </Link>
       </button>
       {loading ? (
         <Loading />
@@ -43,7 +56,6 @@ const SingleCocktail = () => {
               <span>Drink Type: </span>
               {strAlcoholic}
             </p>
-
           </div>
         </div>
       )}

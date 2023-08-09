@@ -12,8 +12,10 @@
 body{
     color:darkslateblue;
     font-family: 'Outfit', sans-serif;
-    background-color: #e9e0f8;
+    transition:all 0.2s ease;
 }
+
+
 li{
     text-decoration: none;
     list-style: none;

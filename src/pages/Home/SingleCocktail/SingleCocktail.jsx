@@ -7,8 +7,7 @@ import Loading from "../../../components/Loading/Loading";
 const SingleCocktail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-
-  const { singleCocktail, loading } = useSelector((store) => store.cocktail);
+  const { singleCocktail, loading,darkMode } = useSelector((store) => store.cocktail);
   const { strDrinkThumb,strCategory , strDrink, strGlass, strAlcoholic } = singleCocktail[0];
 
   console.log(singleCocktail);
@@ -16,9 +15,9 @@ const SingleCocktail = () => {
     dispatch(fetchSingleCocktail(id));
   }, []);
   return (
-    <section className="container">
+    <section className="container cocktailSection">
       <button className="pre">
-        <Link to="/">Back</Link>
+        <Link to="/"  style={{color:`${darkMode?'white':'darkslateblue'}`}}>Back</Link>
       </button>
       {loading ? (
         <Loading />

@@ -18,14 +18,19 @@ const cocktailSlice = createSlice({
   initialState: {
     cocktails: [],
     singleCocktail: [{}],
-    cocktailName:'a',
+    cocktailName: "a",
     loading: false,
     error: false,
+    darkMode: false,
   },
   reducers: {
-    setCocktail:(state,{payload})=>{
-      state.cocktailName = payload
-    }
+    setCocktail: (state, { payload }) => {
+      state.cocktailName = payload;
+    },
+    setDarkMode: (state) => {
+      state.darkMode = !state.darkMode;
+      console.log(state.darkMode);
+    },
   },
   extraReducers: (builds) => {
     builds.addCase(getCocktails.pending, (state) => {
@@ -56,5 +61,5 @@ const cocktailSlice = createSlice({
   },
 });
 
-export const {setCocktail} = cocktailSlice.actions
+export const { setCocktail,setDarkMode } = cocktailSlice.actions;
 export default cocktailSlice.reducer;

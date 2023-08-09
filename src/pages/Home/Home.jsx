@@ -13,10 +13,10 @@ const Home = () => {
   useEffect(() => {
     dispatch(getCocktails(cocktailName));
   }, []);
-  const { loading } = useSelector((store) => store.cocktail);
+  const { loading,darkMode } = useSelector((store) => store.cocktail);
   return (
     <div className="homeSection container">
-      <h1>Find Your Next Drink</h1>
+      <h1  style={{color:`${darkMode?'white':'darkslateblue'}`}}>Find Your Next Drink</h1>
       <div className="searchForm">
         <InputForm />
       </div>

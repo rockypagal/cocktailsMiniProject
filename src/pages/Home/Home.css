@@ -40,6 +40,8 @@
 
 .homeSection .cardSection {
   margin: 50px auto;
+  margin-bottom:0px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;

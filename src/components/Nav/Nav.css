@@ -8,11 +8,14 @@
     padding:15px;
 }
 
-.navSection .logo{
-    color:darkslateblue;
-}
+
 
 .navSection .links ul li{
+ margin-left: 15px;
+ font-size: 20px;
+}
+
+.navSection .links ul li a{
  margin-left: 15px;
  font-size: 20px;
 }
